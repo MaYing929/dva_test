@@ -9,6 +9,7 @@ import {Table,message,Popconfirm} from 'antd';
    loading,
    dataSource
  }) =>{
+   console.log(loading)
    const columns = [
           {
             title: '姓名',

@@ -13,7 +13,7 @@ import UserModal from '../components/Users/UserModal';
  function Users({ location, dispatch, users }){
 
   const {loading, list, total, current, currentItem, modalVisible, modalType} = users;
-
+  console.log('view loading', loading)
   const  userSearchProps = {};
   const  userListProps = {
     dataSource: list,
