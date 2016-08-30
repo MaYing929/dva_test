@@ -9,7 +9,8 @@ import {Table,message,Popconfirm} from 'antd';
    loading,
    dataSource
  }) =>{
-   console.log(loading)
+   console.log('dataSource',dataSource)
+
    const columns = [
           {
             title: '姓名',
@@ -42,7 +43,7 @@ import {Table,message,Popconfirm} from 'antd';
           const pagination = {
             total,
             current,
-            pageSize:10,
+            pageSize:5,
             onchange:()=>{},
           };
 
@@ -50,7 +51,7 @@ import {Table,message,Popconfirm} from 'antd';
             <div>
             <Table
              columns={columns}
-             dataSource={dataSource}
+             dataSource={dataSource.data}
              loading={loading}
              rowkey={record =>record.id}
              pagination={pagination}
